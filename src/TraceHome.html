@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trace Market</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <div id="main-div">
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 header border-bottom shadow-sm">
+            <a class="navbar-brand" href="#">
+                <img src="../images/icon4.png" alt="" height="80px" width="80px">
+            </a>
+            <h5 class="my-0 mr-md-auto header-title">TRACE MARKET</h5>
+            <!-- <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 head-nav" href="#">Products</a>
+                <a class="p-2 head-nav" href="#">Accounts</a>
+            </nav> -->
+        </div>
+
+        <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4">Products @Trace Market</h1>
+            <p class="lead">Details of the products sold @Trace Market can be found here.</p>
+        </div>
+
+        <div class="container trace-container">
+            <div class="row">
+                <div class="col-10">
+                    <div id="product-container" class="card-deck mb-3 text-center"></div>
+                </div>
+                <div class="col-2">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn-add-item btn-item btn btn-info" data-toggle="modal"
+                                data-target="#addFormModal">
+                                <i class="fa fa-plus-circle" aria-hidden="true"> NewItem</i>
+                            </button>
+                            <button class="btn-remove-item btn-item btn btn-info" data-toggle="modal"
+                                data-target="#removeFormModal">
+                                <i class="fa fa-minus-circle" aria-hidden="true"> Remove Item</i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img  class="supporting-image" src="../images/support1.png" alt="supporting image"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADD FORM MODAL -->
+        <div class="modal fade" id="addFormModal" tabindex="-1" role="dialog" aria-labelledby="addFormModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addFormModalLabel">Add Item</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="add-form">
+                            <div class="form-group">
+                                <label for="item-id">Item ID</label>
+                                <input type="text" class="form-control" id="item-id" aria-describedby="item-id-help"
+                                    placeholder="Example: it_x" required>
+                                <small id="item-id-help" class="form-text text-muted"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="item-name">Item Name</label>
+                                <input type="text" class="form-control" id="item-name" aria-describedby="item-name-help"
+                                    placeholder="Example: Pencil" required>
+                                <small id="item-name-help" class="form-text text-muted"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="item-price">Item Price</label>
+                                <input type="number" class="form-control" id="item-price"
+                                    aria-describedby="item-price-help" placeholder="Example: 45" step="0.01" required>
+                                <small id="item-price-help" class="form-text text-muted"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="item-profit">Item Profit</label>
+                                <input type="number" class="form-control" id="item-profit"
+                                    aria-describedby="item-profit-help" placeholder="Example: 20" step="0.01" required>
+                                <small id="item-profit-help" class="form-text text-muted"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="item-stock">Stock Available</label>
+                                <input type="number" class="form-control" id="item-stock"
+                                    aria-describedby="item-stock-help" placeholder="Example: 30" required>
+                                <small id="item-stock-help" class="form-text text-muted"></small>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary submit-add-item">Add</button>
+                        <button type="submit" class="btn btn-primary submit-update-item" style="display: none;">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END OF ADD FORM MODAL -->
+
+        <!-- REMOVE FORM MODAL -->
+        <div class="modal fade" id="removeFormModal" tabindex="-1" role="dialog" aria-labelledby="removeFormModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="removeFormModalLabel">Remove Item</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="remove-form">
+                            <div class="form-group">
+                                <label for="item-id">Item ID</label>
+                                <input type="text" class="form-control" id="item-id" aria-describedby="item-id-help"
+                                    placeholder="Example: it_x" required>
+                                <small id="item-id-help" class="form-text text-muted"></small>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary submit-remove-item">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END OF REMOVE FORM MODAL -->
+
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+                integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+                crossorigin="anonymous"></script>
+            <script data-main="./Event_listeners" type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.js"></script>
+            <script data-main="./TraceMarket" type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.js"></script>
+
+
+        </footer>
+    </div>
+    </div>
+</body>
+
+</html>

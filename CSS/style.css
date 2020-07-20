@@ -1,0 +1,78 @@
+html {
+    font-size: 14px;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  .container {
+    max-width: 960px;
+  }
+  
+  .pricing-header {
+    max-width: 700px;
+  }
+  
+  .card-deck .card {
+    min-width: 300px;
+  }
+
+  .add-stock, .remove-stock {
+    font-size: 22px !important;
+    margin: 0px 5px 0px 5px;
+    color: #4a13c4ad;
+  }
+
+  .add-stock:hover, .remove-stock:hover, .update-btn:hover {
+    color: #4a13c4;
+  }
+
+  .product-qty {
+    box-shadow: 2px 2px 2px 1px rgba(101, 50, 174, 0.35);
+  }
+
+  .header {
+    background: #535b62 !important;
+  }
+  .header-title {
+    color: white;
+    font-weight: 800;
+  }
+
+  .head-nav {
+    color: white;
+    font-weight: 400;
+  }
+
+  .trace-container {
+    max-width: 100% !important;
+  }
+
+  .btn-item {
+    display: block;
+    content: "";
+    clear: both;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    min-width: 140px;
+    text-align: center;
+  }
+
+  .update-btn {
+    color: #4a13c4ad;
+    float: right;
+    font-size: 17px;
+  }
+
+  .badge-secondary {
+    float: left;
+    font-size: 12px;
+  }
+
+  .supporting-image {
+    margin-top: 50px;
+  }
+  
