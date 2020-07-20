@@ -5,9 +5,9 @@
 This project is a simple product maintenance application. This includes the following features:
    1. Add an item
    2. Delete an item
-   3.  Update an item 
+   3. Update an item 
       - Updating only the stock
-      - Updating the complete item
+       - Updating the complete item
       
 ## Prerequisite
 
